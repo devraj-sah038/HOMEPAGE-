@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage with Flip Clock</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css" />
+</head>
+<body>
+   
+
+  <!-- Profile Upload in Top Right -->
+  <div class="profile-upload">
+    <div class="profile-circle">
+      <img id="profileImage" src="image/FB_IMG_1683741066237.jpg" alt="Profile Image" />
+      <button class="upload-text" onclick="document.getElementById('fileInput').click()">Upload Image</button>
+    </div>
+    <input type="file" id="fileInput" accept="image/*" onchange="uploadProfileImage(event)" />
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <form id="searchForm" action="https://www.google.com/search" method="GET" target="_blank">
+      <input type="text" name="q" placeholder="Search here..." required />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- Top Greeting Section -->
+  <div class="top-bar">
+    <h1 id="greeting">Good Evening Devraj</h1>
+    <div id="flip-clock" class="flip-clock"></div>
+    <h2 id="today-date">Today is June 10, 2025</h2>
+
+    <!-- Shortcut Section -->
+    <h2 class="shortcut-title">Most Visited</h2>
+    <div class="shortcuts-grid" id="shortcuts-grid">
+    
+      <!-- Permanent Shortcuts -->
+      <div class="shortcut" data-url="https://www.youtube.com">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=youtube.com" alt="YouTube" />
+        <span>YouTube</span>
+      </div>
+      <div class="shortcut" data-url="https://mail.google.com">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=mail.google.com" alt="Gmail" />
+        <span>Gmail</span>
+      </div>
+      <div class="shortcut" data-url="https://classroom.google.com">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=classroom.google.com" alt="Classroom" />
+        <span>Classroom</span>
+      </div>
+      <div class="shortcut" data-url="https://www.instagram.com">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=instagram.com" alt="Instagram" />
+        <span>Instagram</span>
+      </div>
+      <div class="shortcut" data-url="https://www.facebook.com">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt="Facebook" />
+        <span>Facebook</span>
+      </div>
+    </div>
+
+    <!-- Add Shortcut Form -->
+    <div id="shortcut-form">
+      <input type="text" id="shortcut-name" placeholder="Name (e.g. Temp Mail)" />
+      <input type="url" id="shortcut-url" placeholder="URL (e.g. https://temp-mail.org)" />
+      <button onclick="addShortcut()">Add Shortcut</button>
+      <!--new add-->
+      <button id="reset-page" title="Reset Page">🪣 Reset</button>
+    </div>
+  </div>
+
+  <!-- Other sections of your homepage -->
+  <section id="hero">
+    <h2>Hello, I'm Devraj</h2>
+    <p>This is a simple homepage built with HTML, CSS, and JS.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am passionate about building beautiful websites and learning new technologies.</p>
+  </section>
+
+  <section id="services">
+    <h2>What I Do</h2>
+    <ul>
+      <li>Web Development</li>
+      <li>UI/UX Design</li>
+      <li>Photography</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out!</p>
+    <p>Email: devraj61@gmail.com.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Devraj Sah. All rights reserved.</p>
+  </footer>
+
+  <!-- Developer Badge -->
+  <div class="developer-badge">
+    <img src="image/FB_IMG_1683741066237.jpg" alt="Devraj" />
+    <span>Developed by Devraj</span>
+  </div>
+
+  <!--offline online notifier-->
+  <title>Connection Status Notification</title>
+  <link rel="stylesheet" href="style.css">
+  <div id="status-message" class="online">
+    <i id="status-icon">📶</i>
+    <span id="status-text">You are currently online</span>
+    <button id="close-btn">&times;</button>
+  </div>
+
+  
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
